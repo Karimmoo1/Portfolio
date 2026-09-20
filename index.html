@@ -26,7 +26,7 @@
 
 
   *{ box-sizing: border-box; }
-  html{ scroll-behavior: smooth; }
+  html{ scroll-behavior: smooth; scroll-padding-top: 90px; }
   body{
     margin:0;
     background: var(--paper);
@@ -149,11 +149,11 @@
     border-radius: 50%;
     border: 1px solid var(--accent);
     color: var(--accent);
-    font-family: var(--font-display);
-    font-style: italic;
-    font-weight: 500;
-    font-size: 0.92rem;
-    letter-spacing: 0.01em;
+    font-family: var(--font-body);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
     transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
   }
   .header-brand:hover .logo-mark{
@@ -347,7 +347,7 @@
   }
 
   /* ---------- Sections ---------- */
-  section{ padding: 56px 0; border-bottom: 1px solid var(--line); }
+  section{ padding: 56px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 90px; }
   section:last-of-type{ border-bottom: none; }
 
   .reveal{
@@ -908,11 +908,10 @@
     <nav class="site-nav">
       <a href="#top"><span class="nav-num">01</span> Home</a>
       <a href="#about"><span class="nav-num">02</span> About</a>
-      <a href="#work"><span class="nav-num">03</span> Work</a>
+      <a href="#projects"><span class="nav-num">03</span> Projects</a>
       <a href="#experience"><span class="nav-num">04</span> Experience</a>
       <a href="#skills"><span class="nav-num">05</span> Skills</a>
-      <a href="#achievements"><span class="nav-num">06</span> Achievements</a>
-      <a href="#contact"><span class="nav-num">07</span> Contact</a>
+      <a href="#contact"><span class="nav-num">06</span> Contact</a>
     </nav>
     <button type="button" class="header-cv-btn" id="cvDownloadBtn">CV <span class="btn-arrow">↗</span></button>
   </div>
@@ -927,7 +926,7 @@
       <p class="summary">I work across the full model lifecycle — cleaning and preparing data, training and evaluating models, and making the results explainable enough to actually be used. Recent work spans plant disease classification, real-time face recognition, a disease-information RAG pipeline, and classic tabular ML. NTI/ITIDA-certified in Machine Learning, 97% final score.</p>
       <p class="typing-line"><span class="typing-prefix">$ currently exploring:</span> <span id="typingTarget"></span><span class="typing-cursor">_</span></p>
       <div class="hero-actions">
-        <a href="#work" class="btn btn-primary">View my work <span class="btn-arrow">↓</span></a>
+        <a href="#projects" class="btn btn-primary">View my projects <span class="btn-arrow">↓</span></a>
         <a href="#contact" class="btn btn-outline">Let's connect <span class="btn-arrow">→</span></a>
         <div class="social-row">
           <a class="social-icon" href="https://www.linkedin.com/in/karim-tohamy-313544289/" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -943,6 +942,13 @@
       </div>
     </section>
 
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
+        <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
+      </div>
+    </div>
+
     <section id="about" class="reveal">
       <div class="section-head">
         <div>
@@ -957,20 +963,12 @@
         <div class="spec"><dt>Currently learning</dt><dd>IBM Data Science — Databases &amp; SQL for Data Science with Python</dd></div>
         <div class="spec"><dt>Focus areas</dt><dd>Computer vision, RAG/LLM systems, classical ML</dd></div>
       </dl>
-      <p class="foot-note" style="margin-top:22px;">Outside of AI, I spend time on fitness, nutrition, and coffee — habits I've found translate surprisingly well into staying consistent with long training runs and long model-training runs alike.</p>
     </section>
 
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
-        <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
-      </div>
-    </div>
-
-    <section id="work" class="reveal">
+    <section id="projects" class="reveal">
       <div class="section-head">
         <div>
-          <p class="section-index">03<span class="dashes">————</span>Work</p>
+          <p class="section-index">03<span class="dashes">————</span>Projects</p>
           <h2>Building things that actually run</h2>
         </div>
         <span class="section-note">3 projects</span>
@@ -1264,26 +1262,11 @@
         </div>
       </div>
     </section>
-
-    <section id="achievements" class="reveal">
-      <div class="section-head">
-        <div>
-          <p class="section-index">06<span class="dashes">————</span>Achievements</p>
-          <h2>Progress, measured</h2>
-        </div>
-        <span class="section-note">by the numbers</span>
-      </div>
-      <div class="training-metrics" style="gap: 34px 44px;">
-        <div class="metric"><div class="num" data-target="97" data-suffix="%">0</div><div class="label">NTI/ITIDA ML score</div></div>
-        <div class="metric"><div class="num" data-target="120" data-suffix="">0</div><div class="label">training hours</div></div>
-        <div class="metric"><div class="num" data-target="22" data-suffix="">0</div><div class="label">crops modeled</div></div>
-      </div>
-    </section>
   </div>
 
   <section class="site contact-section" id="contact">
     <div class="wrap">
-      <p class="section-index">07<span class="dashes">————</span>Contact</p>
+      <p class="section-index">06<span class="dashes">————</span>Contact</p>
       <h2>Let's build something worth training.</h2>
       <p class="lead">Open to AI/ML, computer vision, or generative AI roles — happy to talk through any project above, or something new entirely.</p>
       <p class="status-line"><span class="status-dot"></span>status: inbox open — replies faster than most models converge</p>
