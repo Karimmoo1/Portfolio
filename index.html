@@ -35,6 +35,7 @@
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior: auto; }
@@ -105,12 +106,12 @@
     letter-spacing: 0.05em;
     color: var(--ink-faint);
     white-space: nowrap;
-    animation: marquee-scroll 32s linear infinite;
+    animation: marquee-scroll 56s linear infinite;
   }
   .marquee-track .dot{ color: var(--accent); }
   @keyframes marquee-scroll{
     from{ transform: translateX(0); }
-    to{ transform: translateX(-50%); }
+    to{ transform: translateX(-25%); }
   }
   @media (prefers-reduced-motion: reduce){
     .marquee-track{ animation: none; }
@@ -236,6 +237,10 @@
     nav.site-nav{ display:none; }
     .wrap{ padding: 0 20px; }
     .header-inner{ padding: 16px 20px; }
+  }
+  @media (max-width: 380px){
+    .header-role{ display: none; }
+    .header-cv-btn{ padding: 8px 14px; font-size: 0.8rem; }
   }
 
   /* ---------- Hero ---------- */
@@ -553,6 +558,97 @@
   .cap-plus{ color: var(--accent); font-family: var(--font-mono); font-weight: 600; }
 
   .stack-row{ display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+
+  /* ---------- Services ---------- */
+  .services-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  @media (min-width: 640px){
+    .services-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 980px){
+    .services-grid{ grid-template-columns: repeat(3, 1fr); }
+  }
+  .service-card{
+    border: 1px solid var(--line);
+    background: var(--paper-raised);
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .service-card:hover{
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 16px 32px -22px var(--accent);
+  }
+  .service-top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .service-top h3{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.08rem;
+    margin: 0;
+    color: var(--ink);
+    min-width: 0;
+    flex: 1;
+  }
+  .service-price{
+    flex-shrink: 0;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .service-desc{
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0 0 16px;
+    flex: 1;
+  }
+  .service-tags{ display: flex; flex-wrap: wrap; gap: 6px; }
+  .service-card-cta{
+    background: var(--accent);
+    border-color: var(--accent);
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .service-card-cta:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 16px 32px -22px rgba(20,33,58,0.6);
+  }
+  .service-cta-label{
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--paper);
+    margin: 0 0 8px;
+  }
+  .service-cta-text{
+    color: var(--accent-soft);
+    font-size: 0.88rem;
+    margin: 0 0 18px;
+  }
+  .service-card-cta .btn-primary{
+    background: var(--paper);
+    color: var(--accent);
+  }
+  .service-card-cta .btn-primary:hover{
+    background: var(--ink);
+    color: var(--paper);
+  }
   .stack-pill{
     font-family: var(--font-mono);
     font-size: 0.72rem;
@@ -1010,7 +1106,7 @@
 
   /* ---------- Contact section ---------- */
   .contact-section{
-    padding: 60px 0 60px;
+    padding: 56px 0;
   }
   .contact-section h2{
     font-family: var(--font-display);
@@ -1237,6 +1333,8 @@
 
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
+        <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
+        <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
         <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
         <span>PYTHON</span><span class="dot">·</span><span>PYTORCH</span><span class="dot">·</span><span>TENSORFLOW</span><span class="dot">·</span><span>MOBILENETV2</span><span class="dot">·</span><span>FAISS</span><span class="dot">·</span><span>RAG</span><span class="dot">·</span><span>LLAMA 3.1</span><span class="dot">·</span><span>MTCNN</span><span class="dot">·</span><span>FACENET</span><span class="dot">·</span><span>RANDOM FOREST</span><span class="dot">·</span><span>SCIKIT-LEARN</span><span class="dot">·</span>
       </div>
@@ -1575,7 +1673,7 @@
         <div class="service-card">
           <div class="service-top">
             <h3>Computer Vision Model</h3>
-            <span class="service-price">from $250</span>
+            <span class="service-price">from $60</span>
           </div>
           <p class="service-desc">Custom image classification or detection — disease/defect detection, product recognition, or similar — trained and evaluated on your own dataset.</p>
           <div class="service-tags">
@@ -1587,7 +1685,7 @@
         <div class="service-card">
           <div class="service-top">
             <h3>RAG &amp; AI Chatbot</h3>
-            <span class="service-price">from $300</span>
+            <span class="service-price">from $80</span>
           </div>
           <p class="service-desc">An LLM-powered assistant that answers questions from your own documents, FAQs, or knowledge base — not generic chatbot answers.</p>
           <div class="service-tags">
@@ -1600,7 +1698,7 @@
         <div class="service-card">
           <div class="service-top">
             <h3>ML &amp; Predictive Analytics</h3>
-            <span class="service-price">from $200</span>
+            <span class="service-price">from $40</span>
           </div>
           <p class="service-desc">Classification or regression models — recommendation, risk scoring, forecasting — delivered with a clear evaluation report, not just a script.</p>
           <div class="service-tags">
@@ -1612,7 +1710,7 @@
         <div class="service-card">
           <div class="service-top">
             <h3>AI Prototype / MVP</h3>
-            <span class="service-price">from $400</span>
+            <span class="service-price">from $120</span>
           </div>
           <p class="service-desc">Take an AI idea from concept to a working demo you can show stakeholders or investors — full pipeline, not just a notebook.</p>
           <div class="service-tags">
@@ -1624,7 +1722,7 @@
         <div class="service-card">
           <div class="service-top">
             <h3>Data Cleaning &amp; EDA</h3>
-            <span class="service-price">from $120</span>
+            <span class="service-price">from $15</span>
           </div>
           <p class="service-desc">Clean a messy dataset and get a clear exploratory analysis back — distributions, correlations, outliers, and what they mean for your problem.</p>
           <div class="service-tags">
@@ -1644,7 +1742,7 @@
 
   <section class="site contact-section" id="contact">
     <div class="wrap">
-      <p class="section-index">06<span class="dashes">————</span>Contact</p>
+      <p class="section-index">07<span class="dashes">————</span>Contact</p>
       <h2>Let's build something worth training.</h2>
       <p class="lead">Open to AI/ML, computer vision, or generative AI roles — happy to talk through any project above, or something new entirely.</p>
       <p class="status-line"><span class="status-dot"></span>status: inbox open — replies faster than most models converge</p>
